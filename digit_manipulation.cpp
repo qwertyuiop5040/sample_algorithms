@@ -1,4 +1,5 @@
 #include <vector>
+#include <string>
 using namespace std;
 vector<long long> digits(long long n){
 	vector<long long> d;
@@ -10,6 +11,11 @@ vector<long long> digits(long long n){
 	}
 	return d;
 }
+vector<int> digits(string s){
+	vector<int>d;
+	for(int i=0;i<s.length();i++)d.push_back(s[i]-'0');
+	return d;
+}
 int sumDigits(long long n){
 	int ctr=0;
 	long long mod=10;
@@ -18,6 +24,11 @@ int sumDigits(long long n){
 		ctr+=(n%mod-n%(mod/10))/(mod/10);
 		mod/=10;
 	}
+	return ctr;
+}
+int sumDigits(string s){
+	int ctr=0;
+	for(int i=0;i<s.length();i++)ctr+=(s[i]-'0');
 	return ctr;
 }
 int main(){

@@ -1,4 +1,5 @@
 #include <vector>
+using namespace std;
 vector<long long> digits(long long n){
 	vector<long long> d;
 	long long mod=10;

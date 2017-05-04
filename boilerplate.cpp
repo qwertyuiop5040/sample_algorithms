@@ -15,8 +15,8 @@ using namespace std;
 #define forn1(i,n) for(int i=1;i<=n;i++)
 #define mp make_pair
 #define pb push_back
-#define first fi
-#define second se
+#define fi first
+#define se second
 typedef long long ll;
 typedef pair<int,int> pii;
 int t,n;

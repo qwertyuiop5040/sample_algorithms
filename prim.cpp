@@ -1,6 +1,4 @@
 /*
-	Programming Assignment 2
-	By Hanqing Wang, 9594458
 	This is a Prim's algorithm O(|E|log|V|) implementation to find the MST of a graph.
 
 */

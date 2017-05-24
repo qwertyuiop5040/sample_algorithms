@@ -1,3 +1,10 @@
+/*
+	Performance on a 2.7 Ghz computer:
+	n=10e5 -> 0.01 seconds
+	n=10e6 -> 0.16 seconds
+	n=5*10e6 -> 1.27 seconds
+	n=10e7 -> 3.15 seconds
+*/
 #include<vector>
 vector<int> sieve(int n){
 	vector<int>p;

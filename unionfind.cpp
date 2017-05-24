@@ -1,21 +1,22 @@
-struct UnionFind{
+struct union_find{
     int*setSize=NULL;
     int*parent=NULL;
-    UnionFind(int totSets){
+    union_find(int totSets){
         setSize=new int[totSets];
         parent=new int[totSets];
-        for(int i=0;i<totSets;i++){
-            parent[i]=0;
-            setSize[i]=1;
-        }
+        iota(parent,parent+totSets,0);
+        fill(setSize,setSize+totSets,1);
+    }
+    ~union_find(){
+    	if(setSize!=NULL)delete [] setSize;
+    	if(parent!=NULL)delete [] parent;
     }
     int find(int s){
-        if(parent[s]!=NULL){
+        if(parent[s]!=s){
             parent[s]=find(parent[s]);
             return parent[s];
         }
-        else
-            return s;
+        return s;
     }
     bool connected(int s,int j){
         return find(s)==find(j);
@@ -24,7 +25,7 @@ struct UnionFind{
         int ii=find(i),jj=find(j);
         if(setSize[ii]>=setSize[jj]){
             setSize[ii]+=setSize[jj];
-            parent[jj]+=ii;
+            parent[jj]=ii;
         }else{
             setSize[jj]+=setSize[ii];
             parent[ii]=jj;

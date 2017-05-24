@@ -1,3 +1,4 @@
+#include<numeric>
 struct union_find{
     int*setSize=NULL;
     int*parent=NULL;

@@ -10,6 +10,7 @@
 #include <map>
 #include <cmath>
 #include <iomanip>
+#include <climits>
 using namespace std;
 #define forn(i,n) for(int i=0;i<n;i++)
 #define forn1(i,n) for(int i=1;i<=n;i++)

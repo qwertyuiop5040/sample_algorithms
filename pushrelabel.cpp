@@ -1,3 +1,6 @@
+/*
+	O(|V|^3) with gap heuristic
+*/
 #include <iostream>
 #include <vector>
 #include <algorithm>

@@ -50,7 +50,7 @@ bool bfs(){
 	}
 	return lv[t]!=NOT_VISITED;
 }
-void fordfulkerson(){
+void edmondkarp(){
 	while(bfs()){
 		int mn=-1;
 		int cur=t;

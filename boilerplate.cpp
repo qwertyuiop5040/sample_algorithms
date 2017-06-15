@@ -1,16 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <queue>
-#include <stack>
-#include <set>
-#include <string>
-#include <sstream>
-#include <numeric>
-#include <map>
-#include <cmath>
-#include <iomanip>
-#include <climits>
+#include <bits/stdc++.h>
 using namespace std;
 #define forn(i,n) for(int i=0;i<n;i++)
 #define forn1(i,n) for(int i=1;i<=n;i++)

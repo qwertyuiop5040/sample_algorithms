@@ -16,13 +16,12 @@ vector<int> digits(string s){
 	for(int i=0;i<s.length();i++)d.push_back(s[i]-'0');
 	return d;
 }
-int sumDigits(long long n){
-	int ctr=0;
-	long long mod=10;
-	while(mod<=n)mod*=10;
-	while(mod>1){ 
-		ctr+=(n%mod-n%(mod/10))/(mod/10);
-		mod/=10;
+
+ll sumDigits(long long n){
+	ll ctr=0;
+	while(n>=1ll){
+		ctr+=n%10;
+		n/=10;
 	}
 	return ctr;
 }
